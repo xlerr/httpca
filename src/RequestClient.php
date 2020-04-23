@@ -86,7 +86,7 @@ class RequestClient extends Object
         if (YII_DEBUG) {
             // 记录请求信息
             $stack->push(Middleware::mapRequest(function (RequestInterface $request) {
-                Yii::debug([
+                Yii::trace([
                     'url'     => (string)$request->getUri(),
                     'method'  => $request->getMethod(),
                     'headers' => $request->getHeaders(),
@@ -98,7 +98,7 @@ class RequestClient extends Object
 
             // 记录响应信息
             $stack->push(Middleware::mapResponse(function (ResponseInterface $response) {
-                Yii::debug([
+                Yii::trace([
                     'statusCode' => $response->getStatusCode(),
                     'headers'    => $response->getHeaders(),
                     'body'       => (string)$response->getBody(),
