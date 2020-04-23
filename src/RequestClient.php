@@ -10,7 +10,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;
 use Yii;
-use yii\base\BaseObject;
+use yii\base\Object;
 
 /**
  * @method bool get(string | UriInterface $uri, array $options = [])
@@ -26,7 +26,7 @@ use yii\base\BaseObject;
  * @method bool patchAsync(string | UriInterface $uri, array $options = [])
  * @method bool deleteAsync(string | UriInterface $uri, array $options = [])
  */
-class RequestClient extends BaseObject
+class RequestClient extends Object
 {
     const FAILURE = 1;
     const SUCCESS = 0;
